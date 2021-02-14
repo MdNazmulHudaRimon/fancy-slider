@@ -35,7 +35,6 @@ const getImages = (query) => {
     .then(response => response.json())
     .then(data =>{
       showImages(data.hits);
-      console.log(data.hits);
     })
     .catch(err => console.log(err))
 }
@@ -147,7 +146,6 @@ sliderBtn.addEventListener('click', function () {
 
 var srcBtn = document.getElementById('search-btn');
 document.getElementById('search').addEventListener('keypress',function(event){
-    // event.preventDefault();
     if(event.key === 'Enter'){
         srcBtn.click();
     }
